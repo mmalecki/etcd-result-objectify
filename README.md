@@ -25,7 +25,7 @@ changes into:
 
 ## Installation
 ```sh
-npm install etcd-result-objectify"
+npm install etcd-result-objectify
 ```
 
 ## Usage
