@@ -1,0 +1,23 @@
+{
+  "name": "etcd-result-objectify",
+  "version": "0.0.0",
+  "description": "Objectify the results of a recursive etcd query",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/simple-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmalecki/etcd-result-objectify"
+  },
+  "keywords": [
+    "etcd",
+    "objectify"
+  ],
+  "author": "Maciej Małecki <me@mmalecki.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmalecki/etcd-result-objectify/issues"
+  },
+  "homepage": "https://github.com/mmalecki/etcd-result-objectify"
+}
