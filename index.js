@@ -1,15 +1,18 @@
-module.exports = function nodeToObject(node, r_) {
-  var r = r_ || {}
-  var split = (node.key || '/').split('/').filter(Boolean)
-  var key = split[split.length - 1]
+var assert = require('assert')
 
-  if (node.dir) {
-    r[key] = {}
-    node.nodes.forEach(function(childNode) { nodeToObject(childNode, r[key]) })
-  }
-  else {
-    r[key] = node.value
-  }
+module.exports = function nodeToObject(node) {
+  assert(node.dir, 'Passed etcd must be a directory')
+
+  var r = {}
+  node.nodes.forEach(function (childNode) {
+    var split = childNode.key.split('/')
+    var key = split[split.length - 1]
+
+    if (childNode.dir)
+      r[key] = nodeToObject(childNode)
+    else
+      r[key] = childNode.value
+  });
 
   return r
 }

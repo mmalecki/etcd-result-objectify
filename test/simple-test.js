@@ -31,10 +31,8 @@ var testNode = {
 }
 
 assert.deepEqual(etcdResultObjectify(testNode), {
-  registrations: {
-    foo: 'bar',
-    zar: {
-      far: 'bar'
-    }
+  foo: 'bar',
+  zar: {
+    far: 'bar'
   }
 })
