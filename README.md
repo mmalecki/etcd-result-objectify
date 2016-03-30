@@ -1,6 +1,8 @@
 # etcd-result-objectify
 Objectify the results of a recursive etcd query.
 
+[![Build Status](https://travis-ci.org/mmalecki/etcd-result-objectify.svg?branch=master)](https://travis-ci.org/mmalecki/etcd-result-objectify)
+
 For example, a structure like:
 
 ```
