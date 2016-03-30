@@ -1,6 +1,6 @@
 module.exports = function nodeToObject(node, r_) {
   var r = r_ || {}
-  var split = node.key.split('/').filter(Boolean)
+  var split = (node.key || '/').split('/').filter(Boolean)
   var key = split[split.length - 1]
 
   if (node.dir) {
