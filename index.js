@@ -4,6 +4,8 @@ module.exports = function nodeToObject(node) {
   assert(node.dir, 'Passed etcd must be a directory')
 
   var r = {}
+  if (!node.nodes) return r
+
   node.nodes.forEach(function (childNode) {
     var split = childNode.key.split('/')
     var key = split[split.length - 1]
