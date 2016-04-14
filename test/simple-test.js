@@ -30,9 +30,16 @@ var testNode = {
   "createdIndex": 35
 }
 
+var testEmptyDir = {
+  "key": "/empty",
+  "dir": true
+}
+
 assert.deepEqual(etcdResultObjectify(testNode), {
   foo: 'bar',
   zar: {
     far: 'bar'
   }
 })
+
+assert.deepEqual(etcdResultObjectify(testEmptyDir), {})
