@@ -24,7 +24,13 @@ var testNode = {
     ],
     "modifiedIndex": 53,
     "createdIndex": 53
-  }
+  },
+    {
+      "key": "/emptyDirectory",
+      "dir": true,
+      "modifiedIndex": 54,
+      "createdIndex": 54
+    }
   ],
   "modifiedIndex": 35,
   "createdIndex": 35
@@ -34,5 +40,6 @@ assert.deepEqual(etcdResultObjectify(testNode), {
   foo: 'bar',
   zar: {
     far: 'bar'
-  }
+  },
+  emptyDirectory: {}
 })
